@@ -115,7 +115,7 @@ class DisplayLammpsLog(ModifierInterface):
                     ydata[:, i] = log[groups[g][i]]
                 if self.normalize_eng and self.keyIsEnergy(g):
                     ydata /= log["N"]
-                table.y = table.create_property(key, data=ydata, components=groups[g])
+                table.y = table.create_property(g, data=ydata, components=groups[g])
 
         for key in keys:
             table = data.tables.create(
