@@ -3,24 +3,26 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "[[PackageName]]"
-version = "[[Version number]]"
-description = "[[Short description]]"
+name = "DisplayLammpsLog"
+version = "2023.0"
+description = "Display the lammps log file alongside you structure data in OVITO Pro"
 keywords = ["ovito", "ovito-extension"]
-authors = [{name = "[[Author 1 name]]", email = "[[Author 1 email]]"}, {name = "[[Author 2 name]]", email = "[[Author 2 email]]"}]
-maintainers = [{name = "[[Maintainer 1 name]]", email = "[[Maintainer 1 email]]"}]
-license = {text = "[[License]]"}
+authors = [{name = "Daniel Utt", email = "utt@ovito.org"}]
+maintainers = [{name = "Daniel Utt", email = "utt@ovito.org"}]
+license = {text = "MIT"}
 readme = "README.md"
 requires-python = ">=3.7"
 dependencies = [
     "ovito >= 3.9.1",
-]
+    "numpy",
+    "lmParse  @git+https://github.com/nnn911/lmParse@669cdda078755b063318212eced71b3ed5098cf4"
+]   
 
 [project.urls]
-repository = "[[Repository Link]]"
+repository = "https://github.com/nnn911/DisplayLammpsLog"
 
 [project.entry-points.'OVITO.Modifier']
-"[[Human readable modifier name]]" = "[[PackageName]]:[[ModifierName]]"
+"Display Lammps Log" = "DisplayLammpsLog:DisplayLammpsLog"
 
 [tool.setuptools.packages.find]
 where = ["src"]
