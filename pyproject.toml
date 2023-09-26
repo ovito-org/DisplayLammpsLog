@@ -15,7 +15,7 @@ requires-python = ">=3.7"
 dependencies = [
     "ovito >= 3.9.1",
     "numpy",
-    "lmParse  @git+https://github.com/nnn911/lmParse#egg05563a77767b7bccd9657b674f5fc721bb519f3e"
+    "lmParse  @git+https://github.com/nnn911/lmParse@05563a77767b7bccd9657b674f5fc721bb519f3e"
 ]   
 
 [project.urls]
