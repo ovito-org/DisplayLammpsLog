@@ -65,7 +65,7 @@ class DisplayLammpsLog(ModifierInterface):
             if not self.file_name:
                 raise ValueError("Lammps log file name is empty")
 
-            file_name = Path(self.file_name)
+            file_name = Path(self.file_name.strip())
             file_names = glob.glob(str(file_name))
             if len(file_names) == 0:
                 raise FileNotFoundError(f"{file_name} not found")
