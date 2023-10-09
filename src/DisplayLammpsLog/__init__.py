@@ -14,7 +14,7 @@ from traits.api import Bool, Str
 class DisplayLammpsLog(ModifierInterface):
     file_name = Str("", label="Lammps log file")
     group_components = Bool(False, label="Group components")
-    normalize_eng = Bool(False, label="Normalize energies")
+    per_atom_energies = Bool(False, label="Per-atom energies")
 
     @staticmethod
     def groupComponents(keys):
@@ -113,7 +113,7 @@ class DisplayLammpsLog(ModifierInterface):
                 ydata = np.empty((len(log["Step"]), len(groups[g])))
                 for i in range(len(groups[g])):
                     ydata[:, i] = log[groups[g][i]]
-                if self.normalize_eng and self.keyIsEnergy(g):
+                if self.per_atom_energies and self.keyIsEnergy(g):
                     ydata /= log["N"]
                 table.y = table.create_property(g, data=ydata, components=groups[g])
 
@@ -127,7 +127,7 @@ class DisplayLammpsLog(ModifierInterface):
             table.x = table.create_property("Step", data=log["Step"])
 
             ydata = np.expand_dims(log[key], axis=-1)
-            if self.normalize_eng and self.keyIsEnergy(key):
+            if self.per_atom_energies and self.keyIsEnergy(key):
                 ydata /= log["N"]
             table.y = table.create_property(
                 key,

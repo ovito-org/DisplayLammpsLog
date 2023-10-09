@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "DisplayLammpsLog"
-version = "2023.0"
+version = "2023.1"
 description = "Display the lammps log file alongside you structure data in OVITO Pro"
 keywords = ["ovito", "ovito-extension"]
 authors = [{name = "Daniel Utt", email = "utt@ovito.org"}]
