@@ -19,7 +19,7 @@ dependencies = [
 ]   
 
 [project.urls]
-repository = "https://github.com/nnn911/DisplayLammpsLog"
+repository = "https://github.com/ovito-org/DisplayLammpsLog"
 
 [project.entry-points.'OVITO.Modifier']
 "Display Lammps Log" = "DisplayLammpsLog:DisplayLammpsLog"

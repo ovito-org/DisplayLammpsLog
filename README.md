@@ -16,13 +16,13 @@ This modifier takes a Lammps log file and adds it to the data inspector in OVITO
 ## Installation
 - OVITO Pro [integrated Python interpreter](https://docs.ovito.org/python/introduction/installation.html#ovito-pro-integrated-interpreter):
   ```
-  ovitos -m pip install --user git+https://github.com/nnn911/DisplayLammpsLog.git
+  ovitos -m pip install --user git+https://github.com/ovito-org/DisplayLammpsLog.git
   ``` 
   The `--user` option is recommended and [installs the package in the user's site directory](https://pip.pypa.io/en/stable/user_guide/#user-installs).
 
 - Other Python interpreters or Conda environments:
   ```
-  pip install git+https://github.com/nnn911/DisplayLammpsLog.git
+  pip install git+https://github.com/ovito-org/DisplayLammpsLog.git
   ```
 
 ## Technical information / dependencies
